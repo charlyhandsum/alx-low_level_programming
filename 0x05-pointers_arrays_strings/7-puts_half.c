@@ -1,24 +1,30 @@
 #include "main.h"
-#include<string.h>
-
-void _putchar(char *str);
 
 /**
-* puts_half- prints half of a string
-* @str:string to be printed
-* Return: return nothing
-*/
+ *puts_half - prints every other character of a string
+ *@str: A pointer to an int that will be changed
+ *
+ *Return: void which means our answer is correct
+ */
 
 void puts_half(char *str)
-{
-	int x, y, z;
 
-	x = strlen(str);
-	if (x % 2 == 1)
-		y = x / 2 + 1;
-	else
-		y = x / 2;
-	for (z = y; z < x; z++)
-		_putchar(str[z]);
-	_putchar('\n');
+{
+int i, last;
+
+i = 0;
+while (str[i] != '\0')
+{
+i++;
+}
+
+last = (i + 1) / 2;
+
+for (i = last; str[i]; i++)
+{
+_putchar (str[i]);
+}
+
+_putchar ('\n');
+
 }
